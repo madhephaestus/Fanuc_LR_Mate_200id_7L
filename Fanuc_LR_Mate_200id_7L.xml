@@ -27,13 +27,13 @@
 	<type>udp-7dof-float</type>
 	<index>0</index>
 	<scale>1.0</scale>
-	<upperLimit>125.0</upperLimit>
-	<lowerLimit>-125.0</lowerLimit>
+	<upperLimit>170.00001556208602</upperLimit>
+	<lowerLimit>-170.00001556208602</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
-	<deviceTheoreticalMax>180.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-180.0</deviceTheoreticalMin>
+	<deviceTheoreticalMax>170.00001556208602</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-170.00001556208602</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
 	<indexLatch>105.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
@@ -83,13 +83,13 @@
 	<type>udp-7dof-float</type>
 	<index>1</index>
 	<scale>1.0</scale>
-	<upperLimit>75.0</upperLimit>
-	<lowerLimit>-35.0</lowerLimit>
+	<upperLimit>122.49998088079637</upperLimit>
+	<lowerLimit>-122.49998088079637</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
-	<deviceTheoreticalMax>180.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-180.0</deviceTheoreticalMin>
+	<deviceTheoreticalMax>122.49998088079637</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-122.49998088079637</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
 	<indexLatch>97.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
@@ -139,13 +139,13 @@
 	<type>udp-7dof-float</type>
 	<index>2</index>
 	<scale>1.0</scale>
-	<upperLimit>10.0</upperLimit>
-	<lowerLimit>-90.0</lowerLimit>
+	<upperLimit>215.00000620010186</upperLimit>
+	<lowerLimit>-215.00000620010186</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
-	<deviceTheoreticalMax>180.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-180.0</deviceTheoreticalMin>
+	<deviceTheoreticalMax>215.00000620010186</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-215.00000620010186</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
 	<indexLatch>145.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
@@ -195,13 +195,13 @@
 	<type>udp-7dof-float</type>
 	<index>3</index>
 	<scale>1.0</scale>
-	<upperLimit>90.0</upperLimit>
-	<lowerLimit>-90.0</lowerLimit>
+	<upperLimit>190.00002413359965</upperLimit>
+	<lowerLimit>-190.00002413359965</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
-	<deviceTheoreticalMax>180.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-180.0</deviceTheoreticalMin>
+	<deviceTheoreticalMax>190.00002413359965</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-190.00002413359965</deviceTheoreticalMin>
 	<isLatch>false</isLatch>
 	<indexLatch>0.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
@@ -251,13 +251,13 @@
 	<type>udp-7dof-float</type>
 	<index>4</index>
 	<scale>1.0</scale>
-	<upperLimit>105.0</upperLimit>
-	<lowerLimit>-105.0</lowerLimit>
+	<upperLimit>125.0000249240702</upperLimit>
+	<lowerLimit>-125.0000249240702</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
-	<deviceTheoreticalMax>180.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-180.0</deviceTheoreticalMin>
+	<deviceTheoreticalMax>125.0000249240702</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-125.0000249240702</deviceTheoreticalMin>
 	<isLatch>false</isLatch>
 	<indexLatch>0.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
@@ -307,13 +307,13 @@
 	<type>udp-7dof-float</type>
 	<index>5</index>
 	<scale>1.0</scale>
-	<upperLimit>180.0</upperLimit>
-	<lowerLimit>-180.0</lowerLimit>
+	<upperLimit>359.9999823999062</upperLimit>
+	<lowerLimit>-359.9999823999062</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
-	<deviceTheoreticalMax>180.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-180.0</deviceTheoreticalMin>
+	<deviceTheoreticalMax>359.9999823999062</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-359.9999823999062</deviceTheoreticalMin>
 	<isLatch>false</isLatch>
 	<indexLatch>0.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>

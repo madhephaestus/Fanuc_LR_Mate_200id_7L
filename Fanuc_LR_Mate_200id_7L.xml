@@ -27,8 +27,8 @@
 	<type>udp-7dof-float</type>
 	<index>0</index>
 	<scale>1.0</scale>
-	<upperLimit>90.0</upperLimit>
-	<lowerLimit>-90.0</lowerLimit>
+	<upperLimit>125</upperLimit>
+	<lowerLimit>-125</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
@@ -70,10 +70,10 @@
 	<rotz>-0.0</rotz></imuFromCentroid>
 
 	<DHParameters>
-		<Delta>45.0</Delta>
-		<Theta>0.01</Theta>
-		<Radius>0.0</Radius>
-		<Alpha>-89.97</Alpha>
+		<Delta>0</Delta>
+		<Theta>0.00</Theta>
+		<Radius>50</Radius>
+		<Alpha>-90</Alpha>
 	</DHParameters>
 
 </link>
@@ -83,8 +83,8 @@
 	<type>udp-7dof-float</type>
 	<index>1</index>
 	<scale>1.0</scale>
-	<upperLimit>90.0</upperLimit>
-	<lowerLimit>-90.0</lowerLimit>
+	<upperLimit>75</upperLimit>
+	<lowerLimit>-35</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
@@ -127,9 +127,9 @@
 
 	<DHParameters>
 		<Delta>0.0</Delta>
-		<Theta>-90.0</Theta>
-		<Radius>100.0</Radius>
-		<Alpha>0.01</Alpha>
+		<Theta>0</Theta>
+		<Radius>440</Radius>
+		<Alpha>0.00</Alpha>
 	</DHParameters>
 
 </link>
@@ -139,7 +139,7 @@
 	<type>udp-7dof-float</type>
 	<index>2</index>
 	<scale>1.0</scale>
-	<upperLimit>90.0</upperLimit>
+	<upperLimit>10</upperLimit>
 	<lowerLimit>-90.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
@@ -184,7 +184,7 @@
 	<DHParameters>
 		<Delta>0.0</Delta>
 		<Theta>0.0</Theta>
-		<Radius>50.0</Radius>
+		<Radius>35</Radius>
 		<Alpha>-90.0</Alpha>
 	</DHParameters>
 
@@ -195,8 +195,8 @@
 	<type>udp-7dof-float</type>
 	<index>3</index>
 	<scale>1.0</scale>
-	<upperLimit>110.0</upperLimit>
-	<lowerLimit>-110.0</lowerLimit>
+	<upperLimit>90</upperLimit>
+	<lowerLimit>-90</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
@@ -238,8 +238,8 @@
 	<rotz>-0.0</rotz></imuFromCentroid>
 
 	<DHParameters>
-		<Delta>100.0</Delta>
-		<Theta>90.0</Theta>
+		<Delta>420</Delta>
+		<Theta>0</Theta>
 		<Radius>0.0</Radius>
 		<Alpha>90.0</Alpha>
 	</DHParameters>
@@ -251,8 +251,8 @@
 	<type>udp-7dof-float</type>
 	<index>4</index>
 	<scale>1.0</scale>
-	<upperLimit>150.0</upperLimit>
-	<lowerLimit>-55.0</lowerLimit>
+	<upperLimit>105</upperLimit>
+	<lowerLimit>-105</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
@@ -295,7 +295,7 @@
 
 	<DHParameters>
 		<Delta>0.0</Delta>
-		<Theta>135.0</Theta>
+		<Theta>0</Theta>
 		<Radius>0.0</Radius>
 		<Alpha>90.0</Alpha>
 	</DHParameters>
@@ -307,13 +307,13 @@
 	<type>udp-7dof-float</type>
 	<index>5</index>
 	<scale>1.0</scale>
-	<upperLimit>110.0</upperLimit>
-	<lowerLimit>-110.0</lowerLimit>
+	<upperLimit>210</upperLimit>
+	<lowerLimit>-210</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
-	<deviceTheoreticalMax>180.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-180.0</deviceTheoreticalMin>
+	<deviceTheoreticalMax>360.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-360.0</deviceTheoreticalMin>
 	<isLatch>false</isLatch>
 	<indexLatch>0.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
@@ -350,69 +350,14 @@
 	<rotz>-0.0</rotz></imuFromCentroid>
 
 	<DHParameters>
-		<Delta>60.0</Delta>
-		<Theta>90.0</Theta>
+		<Delta>80.0</Delta>
+		<Theta>0</Theta>
 		<Radius>0.0</Radius>
 		<Alpha>0.0</Alpha>
 	</DHParameters>
 
 </link>
-<link>
-	<name>tool</name>
-	<deviceName>GroguArm</deviceName>
-	<type>udp-7dof-float</type>
-	<index>6</index>
-	<scale>1.0</scale>
-	<upperLimit>110.0</upperLimit>
-	<lowerLimit>-110.0</lowerLimit>
-	<upperVelocity>1.0E8</upperVelocity>
-	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>0.0</staticOffset>
-	<deviceTheoreticalMax>180.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-180.0</deviceTheoreticalMin>
-	<isLatch>false</isLatch>
-	<indexLatch>0.0</indexLatch>
-	<isStopOnLatch>false</isStopOnLatch>
-	<homingTPS>10000000</homingTPS>
 
-	<vitamins>
-		<vitamin>
-			<name>electroMechanical</name>
-			<type>hobbyServo</type>
-			<id>standardMicro</id>
-		</vitamin>
-		<vitamin>
-			<name>shaft</name>
-			<type>hobbyServoHorn</type>
-			<id>standardMicro1</id>
-		</vitamin>
-
-	</vitamins>
-	<passive>false</passive>
-	<mass>0.0</mass>
-	<centerOfMassFromCentroid>	<x>0.0</x>
-	<y>0.0</y>
-	<z>0.0</z>
-	<rotw>1.0</rotw>
-	<rotx>-0.0</rotx>
-	<roty>-0.0</roty>
-	<rotz>-0.0</rotz></centerOfMassFromCentroid>
-	<imuFromCentroid>	<x>0.0</x>
-	<y>0.0</y>
-	<z>0.0</z>
-	<rotw>1.0</rotw>
-	<rotx>-0.0</rotx>
-	<roty>-0.0</roty>
-	<rotz>-0.0</rotz></imuFromCentroid>
-
-	<DHParameters>
-		<Delta>9.0</Delta>
-		<Theta>0.0</Theta>
-		<Radius>0.0</Radius>
-		<Alpha>0.0</Alpha>
-	</DHParameters>
-
-</link>
 
 <ZframeToRAS
 >	<x>0.0</x>

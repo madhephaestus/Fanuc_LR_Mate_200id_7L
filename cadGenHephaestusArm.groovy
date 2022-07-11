@@ -95,9 +95,28 @@ return new ICadGenerator(){
 					CSG calShaft =new Cylinder(calSpikeRad,calSpikeShaftlen).toCSG() // a one line Cylinder
 									.movez(calTipConeHeight)		
 					def link = tip.union(calShaft)	
-					link.setManipulator(manipulator)
 					link.setColor(Color.web("#C0C0C0"))
-					parts.add(link)
+					double fingerTop = 160-68.5
+					CSG finger=Vitamins.get(ScriptingEngine.fileFromGit(
+						"https://github.com/madhephaestus/Fanuc_LR_Mate_200id_7L.git",
+						"mesh/4acc-5k-kin-centered.stl")).rotz(-90).movez(fingerTop)
+						.setColor(Color.BLUE)
+					double seperation = 70
+					
+					CSG left= finger.movex(seperation/2)
+					CSG right= finger.rotz(180).movex(-seperation/2)
+					CSG hand = new Cube(finger.getTotalX()+seperation,finger.getTotalY(),25 ).toCSG()
+								.toZMin()
+								.movez(fingerTop)
+								.setColor(Color.WHITE)
+					CSG hose =new Cylinder(4, 60).toCSG()
+								.rotx(-70)
+								.movez(fingerTop+25)
+								.setColor(Color.LIGHTBLUE)
+					parts.addAll([link,left,right,hand,hose])
+					for(CSG c:parts) {
+						c.setManipulator(manipulator)
+					}
 				}
 					
 				return parts;

@@ -28,7 +28,7 @@ import eu.mihosoft.vrl.v3d.RoundedCube
 import eu.mihosoft.vrl.v3d.RoundedCylinder
 import eu.mihosoft.vrl.v3d.Sphere
 import eu.mihosoft.vrl.v3d.Transform
-
+import javafx.scene.paint.Color
 import javafx.scene.transform.Affine;
 import  eu.mihosoft.vrl.v3d.ext.quickhull3d.*
 import eu.mihosoft.vrl.v3d.parametrics.LengthParameter
@@ -81,6 +81,7 @@ return new ICadGenerator(){
 						link=reverseDHValues(link,dh).roty(90).movez(-160)
 					}
 					link.setManipulator(manipulator)
+					link.setColor(Color.web("#f3da0b"))
 					parts.add(link)
 				}else if(arg1==6) {
 					def calTipConeHeight = 22.5
@@ -95,9 +96,10 @@ return new ICadGenerator(){
 									.movez(calTipConeHeight)		
 					def link = tip.union(calShaft)	
 					link.setManipulator(manipulator)
+					link.setColor(Color.web("#C0C0C0"))
 					parts.add(link)
 				}
-
+					
 				return parts;
 			}
 
@@ -112,6 +114,8 @@ return new ICadGenerator(){
 				base.setManipulator(manipulator)
 
 				parts.add(base)
+				for(CSG part :parts)
+					part.setColor(Color.web("#f3da0b"))
 				return parts;
 			}
 		};

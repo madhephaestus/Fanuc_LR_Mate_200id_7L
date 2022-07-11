@@ -23,8 +23,8 @@
 	</kinematics>
 <link>
 	<name>basePan</name>
-	<deviceName>GroguArm</deviceName>
-	<type>udp-7dof-float</type>
+	<deviceName>virtualLinkProvider</deviceName>
+	<type>virtual</type>
 	<index>0</index>
 	<scale>1.0</scale>
 	<upperLimit>170.00001556208602</upperLimit>
@@ -79,8 +79,8 @@
 </link>
 <link>
 	<name>baseTilt</name>
-	<deviceName>GroguArm</deviceName>
-	<type>udp-7dof-float</type>
+	<deviceName>virtualLinkProvider</deviceName>
+	<type>virtual</type>
 	<index>1</index>
 	<scale>1.0</scale>
 	<upperLimit>122.49998088079637</upperLimit>
@@ -135,8 +135,8 @@
 </link>
 <link>
 	<name>elbow</name>
-	<deviceName>GroguArm</deviceName>
-	<type>udp-7dof-float</type>
+	<deviceName>virtualLinkProvider</deviceName>
+	<type>virtual</type>
 	<index>2</index>
 	<scale>1.0</scale>
 	<upperLimit>215.00000620010186</upperLimit>
@@ -191,8 +191,8 @@
 </link>
 <link>
 	<name>wrist1</name>
-	<deviceName>GroguArm</deviceName>
-	<type>udp-7dof-float</type>
+	<deviceName>virtualLinkProvider</deviceName>
+	<type>virtual</type>
 	<index>3</index>
 	<scale>1.0</scale>
 	<upperLimit>190.00002413359965</upperLimit>
@@ -247,8 +247,8 @@
 </link>
 <link>
 	<name>wrist2</name>
-	<deviceName>GroguArm</deviceName>
-	<type>udp-7dof-float</type>
+	<deviceName>virtualLinkProvider</deviceName>
+	<type>virtual</type>
 	<index>4</index>
 	<scale>1.0</scale>
 	<upperLimit>125.0000249240702</upperLimit>
@@ -303,8 +303,8 @@
 </link>
 <link>
 	<name>wrist3</name>
-	<deviceName>GroguArm</deviceName>
-	<type>udp-7dof-float</type>
+	<deviceName>virtualLinkProvider</deviceName>
+	<type>virtual</type>
 	<index>5</index>
 	<scale>1.0</scale>
 	<upperLimit>359.9999823999062</upperLimit>
@@ -359,8 +359,8 @@
 </link>
 <link>
 	<name>ToolFrame</name>
-	<deviceName>GroguArm</deviceName>
-	<type>udp-7dof-float</type>
+	<deviceName>virtualLinkProvider</deviceName>
+	<type>virtual</type>
 	<index>6</index>
 	<scale>1.0</scale>
 	<upperLimit>1.0</upperLimit>
@@ -473,8 +473,6 @@
 
 <vitamins>
 
-</vitamins>
-
-</mobilebase>
+</vitamivirtualase>
 
 </root>

@@ -116,10 +116,7 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		// Rotate the tip into the xZ plane
 		// apply a transform to the tip here to compute where it
 		// would be on the ZX plane if the base angel was 0
-		double alphaBase =
-				Math.toDegrees(
-				links.get(0).getAlpha()
-				)
+
 		def firstLink =new TransformNR(links.get(0).DhStep(baseVectorAngle)).inverse()
 		def tipNoRot =new TransformNR(x,y,z,new RotationNR())
 
@@ -190,8 +187,15 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		// compute the top of the wrist now that the first 3 links are calculated
 		 * 
 		 */
+		double[] wristLinks=new double[jointSpaceVector.length]
+		for(int i=0;i<3;i++) {
+			wristLinks[i]=jointSpaceVector[i];
+		}
+		for(int i=3;i<jointSpaceVector.length;i++) {
+			wristLinks[i]=0
+		}
 		ArrayList<TransformNR> chainToLoad =[]
-		chain.forwardKinematicsMatrix(jointSpaceVector,chainToLoad)
+		chain.forwardKinematicsMatrix(wristLinks,chainToLoad)
 		def	startOfWristSet=chain.kin.inverseOffset(chainToLoad.get(2));
 		TransformNR wristMOvedToCenter0 =startOfWristSet
 											.inverse()// move back from base ot wrist to world home
@@ -203,6 +207,7 @@ public class scriptJavaIKModel implements DhInverseSolver {
 			return inverseKinematics6dof(target.copy().translateX(0.01));
 		}
 		jointSpaceVector[3]=(Math.toDegrees(Math.atan2(wristMOvedToCenter0.getY(), wristMOvedToCenter0.getX()))-Math.toDegrees(links.get(3).getTheta()))
+		wristLinks[3]=jointSpaceVector[3]
 		if(jointSpaceVector.length==4)
 			return jointSpaceVector
 		
@@ -212,7 +217,7 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		 * 
 		 */
 		chainToLoad.clear()
-		chain.forwardKinematicsMatrix(jointSpaceVector,chainToLoad)
+		chain.forwardKinematicsMatrix(wristLinks,chainToLoad)
 		def	startOfWristSet2=chain.kin.inverseOffset(chainToLoad.get(3));
 		TransformNR wristMOvedToCenter1 =startOfWristSet2
 											.inverse()// move back from base ot wrist to world home
@@ -224,8 +229,9 @@ public class scriptJavaIKModel implements DhInverseSolver {
 			return inverseKinematics6dof(target.copy().translateX(0.01));
 		}
 		jointSpaceVector[4]=(Math.toDegrees(Math.atan2(wristMOvedToCenter1.getY(), wristMOvedToCenter1.getX()))-
-			Math.toDegrees(links.get(4).getTheta())+
+			Math.toDegrees(links.get(4).getTheta())-
 			90)
+		wristLinks[4]=jointSpaceVector[4]
 		if(jointSpaceVector.length==5)
 			return jointSpaceVector
 		chainToLoad =[]
@@ -233,12 +239,14 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		// Calculte the last angle
 		 * 
 		 */
-		chain.forwardKinematicsMatrix(jointSpaceVector,chainToLoad)
+		chain.forwardKinematicsMatrix(wristLinks,chainToLoad)
 		def	startOfWristSet3=chain.kin.inverseOffset(chainToLoad.get(4));
-		
+		def tool = new TransformNR()
+		if(linkNum==7)
+			tool=linkOffset(links.get(6))
 		TransformNR wristMOvedToCenter2 =startOfWristSet3
 											.inverse()// move back from base ot wrist to world home
-											.times(target)// move forward to target, leaving the angle between the tip and the start of the rotation
+											.times(target.times(tool.inverse()))// move forward to target, leaving the angle between the tip and the start of the rotation
 		if(debug)println "\n\nLastLink "	+wristMOvedToCenter2
 		RotationNR qWrist3=wristMOvedToCenter2.getRotation()
 		jointSpaceVector[5]=(Math.toDegrees(qWrist3.getRotationAzimuth())-Math.toDegrees(links.get(5).getTheta()))

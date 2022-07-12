@@ -206,17 +206,14 @@ public class scriptJavaIKModel implements DhInverseSolver {
 			println "Singularity! try something else"
 			return inverseKinematics6dof(target.copy().translateX(0.01));
 		}
-		def tmp = (Math.toDegrees(Math.atan2(wristMOvedToCenter0.getY(), wristMOvedToCenter0.getX()))-Math.toDegrees(links.get(3).getTheta()))
-		def plus180 = tmp+180
-		def minus180 = tmp-180
-		def closest=tmp
-		def options = [ tmp,plus180,minus180]
+		def closest= (Math.toDegrees(Math.atan2(wristMOvedToCenter0.getY(), wristMOvedToCenter0.getX()))-Math.toDegrees(links.get(3).getTheta()))
+		def options = [ closest,closest+180,closest-180]
 		def currentWristStart=jointSpaceVector[3]
-		def lowestDelt = Math.abs(currentWristStart-tmp)
 		for(def val:options) {
 			def delt =  Math.abs(currentWristStart-val)
-			if(delt<lowestDelt)
+			if(delt<Math.abs(currentWristStart-closest)) {
 				closest=val
+			}
 		}
 		jointSpaceVector[3]=closest
 		wristLinks[3]=jointSpaceVector[3]

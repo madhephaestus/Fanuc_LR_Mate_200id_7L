@@ -128,7 +128,8 @@ return new ICadGenerator(){
 				CSG base  = Vitamins.get(ScriptingEngine.fileFromGit(
 						"https://github.com/madhephaestus/Fanuc_LR_Mate_200id_7L.git",
 						"mesh/base_link.stl")).scale(1000)
-						//.movez(-273)
+						.toZMax()
+						.movez(-160)
 				Affine manipulator = arg0.getRootListener()
 				base.setManipulator(manipulator)
 

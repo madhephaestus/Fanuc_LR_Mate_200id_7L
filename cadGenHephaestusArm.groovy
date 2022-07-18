@@ -72,7 +72,7 @@ return new ICadGenerator(){
 								.movex(-35)
 					}
 					if(arg1==3) {
-						link=moveDHValues(reverseDHValues(link,dh).roty(90),dh)
+						link=moveDHValues(reverseDHValues(link,dh).roty(90),dh).movey(-5)
 					}
 					if(arg1==4) {
 						link=moveDHValues(reverseDHValues(link,dh).roty(90),dh)	.rotx(90)

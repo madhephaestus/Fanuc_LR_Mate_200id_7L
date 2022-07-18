@@ -29,8 +29,8 @@
 	<scale>1.0</scale>
 	<upperLimit>170.00001556208602</upperLimit>
 	<lowerLimit>-170.00001556208602</lowerLimit>
-	<upperVelocity>340.0</upperVelocity>
-	<lowerVelocity>-340.0</lowerVelocity>
+	<upperVelocity>370.0</upperVelocity>
+	<lowerVelocity>-370.0</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
 	<deviceTheoreticalMax>170.00001556208602</deviceTheoreticalMax>
 	<deviceTheoreticalMin>-170.00001556208602</deviceTheoreticalMin>
@@ -85,8 +85,8 @@
 	<scale>1.0</scale>
 	<upperLimit>122.49998088079637</upperLimit>
 	<lowerLimit>-122.49998088079637</lowerLimit>
-	<upperVelocity>245.0</upperVelocity>
-	<lowerVelocity>-245.0</lowerVelocity>
+	<upperVelocity>310.0</upperVelocity>
+	<lowerVelocity>-310.0</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
 	<deviceTheoreticalMax>122.49998088079637</deviceTheoreticalMax>
 	<deviceTheoreticalMin>-122.49998088079637</deviceTheoreticalMin>
@@ -197,8 +197,8 @@
 	<scale>1.0</scale>
 	<upperLimit>190.00002413359965</upperLimit>
 	<lowerLimit>-190.00002413359965</lowerLimit>
-	<upperVelocity>380.0</upperVelocity>
-	<lowerVelocity>-380.0</lowerVelocity>
+	<upperVelocity>550.0</upperVelocity>
+	<lowerVelocity>-550.0</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
 	<deviceTheoreticalMax>190.00002413359965</deviceTheoreticalMax>
 	<deviceTheoreticalMin>-190.00002413359965</deviceTheoreticalMin>
@@ -253,8 +253,8 @@
 	<scale>1.0</scale>
 	<upperLimit>125.0000249240702</upperLimit>
 	<lowerLimit>-125.0000249240702</lowerLimit>
-	<upperVelocity>250.0</upperVelocity>
-	<lowerVelocity>-250.0</lowerVelocity>
+	<upperVelocity>545.0</upperVelocity>
+	<lowerVelocity>-545.0</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
 	<deviceTheoreticalMax>125.0000249240702</deviceTheoreticalMax>
 	<deviceTheoreticalMin>-125.0000249240702</deviceTheoreticalMin>
@@ -309,8 +309,8 @@
 	<scale>1.0</scale>
 	<upperLimit>359.9999823999062</upperLimit>
 	<lowerLimit>-359.9999823999062</lowerLimit>
-	<upperVelocity>720.0</upperVelocity>
-	<lowerVelocity>-720.0</lowerVelocity>
+	<upperVelocity>1000.0</upperVelocity>
+	<lowerVelocity>-1000.0</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
 	<deviceTheoreticalMax>359.9999823999062</deviceTheoreticalMax>
 	<deviceTheoreticalMin>-359.9999823999062</deviceTheoreticalMin>

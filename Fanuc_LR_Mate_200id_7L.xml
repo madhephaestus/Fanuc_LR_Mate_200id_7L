@@ -438,7 +438,7 @@
 	<deviceName>cmod</deviceName>
 	<type>CMOD</type>
 	<index>0</index>
-	<scale>0.33</scale>
+	<scale>1.0</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
@@ -494,7 +494,7 @@
 	<deviceName>cmod</deviceName>
 	<type>CMOD</type>
 	<index>0</index>
-	<scale>0.33</scale>
+	<scale>1.0</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
@@ -550,12 +550,12 @@
 	<deviceName>cmod</deviceName>
 	<type>CMOD</type>
 	<index>0</index>
-	<scale>0.33</scale>
+	<scale>1.0</scale>
 	<upperLimit>255.0</upperLimit>
-	<lowerLimit>0.0</lowerLimit>
+	<lowerLimit>7.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>121.0</staticOffset>
+	<staticOffset>128.0</staticOffset>
 	<deviceTheoreticalMax>255.0</deviceTheoreticalMax>
 	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
@@ -616,10 +616,10 @@
 	<x>20.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>0.5000654493708815</rotw>
-	<rotx>-0.5000218123320439</rotx>
-	<roty>0.4999781791005911</roty>
-	<rotz>0.49993454967718903</rotz>
+	<rotw>0.5000654493708816</rotw>
+	<rotx>-0.500021812332044</rotx>
+	<roty>0.4999781791005912</roty>
+	<rotz>0.49993454967718914</rotz>
 </baseToZframe>
 
 </appendage>
@@ -639,7 +639,7 @@
 	<deviceName>cmod</deviceName>
 	<type>CMOD</type>
 	<index>0</index>
-	<scale>0.33</scale>
+	<scale>1.0</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
@@ -695,7 +695,7 @@
 	<deviceName>cmod</deviceName>
 	<type>CMOD</type>
 	<index>0</index>
-	<scale>0.33</scale>
+	<scale>1.0</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
@@ -751,12 +751,12 @@
 	<deviceName>cmod</deviceName>
 	<type>CMOD</type>
 	<index>0</index>
-	<scale>0.33</scale>
+	<scale>1.0</scale>
 	<upperLimit>255.0</upperLimit>
-	<lowerLimit>0.0</lowerLimit>
+	<lowerLimit>7.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>121.0</staticOffset>
+	<staticOffset>128.0</staticOffset>
 	<deviceTheoreticalMax>255.0</deviceTheoreticalMax>
 	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
 	<isLatch>true</isLatch>

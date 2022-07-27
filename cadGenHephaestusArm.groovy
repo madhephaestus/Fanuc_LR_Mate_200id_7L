@@ -113,7 +113,7 @@ return new ICadGenerator(){
 								.rotx(-70)
 								.movez(fingerTop+25)
 								.setColor(Color.LIGHTBLUE)
-					parts.addAll([link,left,right,hand,hose])
+					parts.addAll([hand,hose])
 					for(CSG c:parts) {
 						c.setManipulator(manipulator)
 					}

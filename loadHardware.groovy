@@ -20,7 +20,7 @@ public class MockCMOD implements INewLinkProvider{
 
 	public void setClose(boolean val) {
 		angle=val?OPEN_ANGLE:CLOSE_VLAUE;
-		println "Gripper "+val
+		println "Gripper "+angle
 		for(int i=0;i<links.size();i++) {
 			links.get(i).fireLinkListener(angle);
 		}

@@ -18,6 +18,7 @@ return new ICadGenerator() {
 	@Override
 	public ArrayList<CSG> generateBody(MobileBase base) {
 		ArrayList<CSG> parts = new ArrayList();
+		parts.add(new Cube(0.01).toCSG())
 		return parts;
 	}
 	

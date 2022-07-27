@@ -413,8 +413,8 @@
 
 		<mobilebase>
 	<cadEngine>
-		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
-		<file>ThreeDPrintCad.groovy</file>
+		<git>https://github.com/madhephaestus/Fanuc_LR_Mate_200id_7L.git</git>
+		<file>fingerCad.groovy</file>
 	</cadEngine>
 	<driveEngine>
 		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
@@ -426,8 +426,8 @@
 
 <name>finger_0</name>
 	<cadEngine>
-		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
-		<file>ThreeDPrintCad.groovy</file>
+		<git>https://github.com/madhephaestus/Fanuc_LR_Mate_200id_7L.git</git>
+		<file>fingerCad.groovy</file>
 	</cadEngine>
 	<kinematics>
 		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
@@ -616,10 +616,10 @@
 	<x>20.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>1.0</rotw>
-	<rotx>0.0</rotx>
-	<roty>0.0</roty>
-	<rotz>0.0</rotz>
+	<rotw>0.5000654493708815</rotw>
+	<rotx>-0.5000218123320439</rotx>
+	<roty>0.4999781791005911</roty>
+	<rotz>0.49993454967718903</rotz>
 </baseToZframe>
 
 </appendage>
@@ -627,8 +627,8 @@
 
 <name>finger_1</name>
 	<cadEngine>
-		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
-		<file>ThreeDPrintCad.groovy</file>
+		<git>https://github.com/madhephaestus/Fanuc_LR_Mate_200id_7L.git</git>
+		<file>fingerCad.groovy</file>
 	</cadEngine>
 	<kinematics>
 		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
@@ -817,10 +817,10 @@
 	<x>-20.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>1.0</rotw>
-	<rotx>0.0</rotx>
-	<roty>0.0</roty>
-	<rotz>0.0</rotz>
+	<rotw>0.5000654493720741</rotw>
+	<rotx>0.4999345496759963</rotx>
+	<roty>0.49997817910051157</roty>
+	<rotz>-0.5000218123321234</rotz>
 </baseToZframe>
 
 </appendage>

@@ -439,15 +439,15 @@
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>1.0</scale>
-	<upperLimit>255.0</upperLimit>
-	<lowerLimit>0.0</lowerLimit>
+	<upperLimit>20</upperLimit>
+	<lowerLimit>-20</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>128.43283582089552</staticOffset>
-	<deviceTheoreticalMax>255.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
+	<staticOffset>0</staticOffset>
+	<deviceTheoreticalMax>20.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-20</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>235.0</indexLatch>
+	<indexLatch>0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -495,15 +495,15 @@
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>1.0</scale>
-	<upperLimit>255.0</upperLimit>
-	<lowerLimit>0.0</lowerLimit>
+	<upperLimit>20</upperLimit>
+	<lowerLimit>-20</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>128.0</staticOffset>
-	<deviceTheoreticalMax>255.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
+	<staticOffset>0</staticOffset>
+	<deviceTheoreticalMax>20.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-20</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>128.0</indexLatch>
+	<indexLatch>0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -551,15 +551,15 @@
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>1.0</scale>
-	<upperLimit>255.0</upperLimit>
-	<lowerLimit>7.0</lowerLimit>
+	<upperLimit>20</upperLimit>
+	<lowerLimit>-20</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>128.0</staticOffset>
-	<deviceTheoreticalMax>255.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
+	<staticOffset>0</staticOffset>
+	<deviceTheoreticalMax>20.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-20</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>121.0</indexLatch>
+	<indexLatch>0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -640,15 +640,15 @@
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>1.0</scale>
-	<upperLimit>255.0</upperLimit>
-	<lowerLimit>0.0</lowerLimit>
+	<upperLimit>20</upperLimit>
+	<lowerLimit>-20</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>128.43283582089552</staticOffset>
-	<deviceTheoreticalMax>255.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
+	<staticOffset>0</staticOffset>
+	<deviceTheoreticalMax>20.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-20</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>235.0</indexLatch>
+	<indexLatch>0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -696,15 +696,15 @@
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>1.0</scale>
-	<upperLimit>255.0</upperLimit>
-	<lowerLimit>0.0</lowerLimit>
+	<upperLimit>20</upperLimit>
+	<lowerLimit>-20</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>128.0</staticOffset>
-	<deviceTheoreticalMax>255.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
+	<staticOffset>0</staticOffset>
+	<deviceTheoreticalMax>20.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-20</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>128.0</indexLatch>
+	<indexLatch>0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -752,15 +752,15 @@
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>1.0</scale>
-	<upperLimit>255.0</upperLimit>
-	<lowerLimit>7.0</lowerLimit>
+	<upperLimit>20</upperLimit>
+	<lowerLimit>-20</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>128.0</staticOffset>
-	<deviceTheoreticalMax>255.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
+	<staticOffset>0</staticOffset>
+	<deviceTheoreticalMax>20.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-20</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>121.0</indexLatch>
+	<indexLatch>0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 

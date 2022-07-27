@@ -51,8 +51,6 @@ public class MockCMOD implements INewLinkProvider{
 				
 			}
 		};
-		abstractLink.setDeviceMaximumValue(OPEN_ANGLE);
-		abstractLink.setDeviceMinimumValue(CLOSE_VLAUE);
 		links.add(abstractLink);
 		return abstractLink;
 	}

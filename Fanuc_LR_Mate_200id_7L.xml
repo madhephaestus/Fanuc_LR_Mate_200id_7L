@@ -435,7 +435,7 @@
 	</kinematics>
 <link>
 	<name>basePan</name>
-	<deviceName>dyio</deviceName>
+	<deviceName>cmod</deviceName>
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>0.33</scale>
@@ -491,7 +491,7 @@
 </link>
 <link>
 	<name>baseTilt</name>
-	<deviceName>dyio</deviceName>
+	<deviceName>cmod</deviceName>
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>0.33</scale>
@@ -547,7 +547,7 @@
 </link>
 <link>
 	<name>elbow</name>
-	<deviceName>dyio</deviceName>
+	<deviceName>cmod</deviceName>
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>0.33</scale>
@@ -636,7 +636,7 @@
 	</kinematics>
 <link>
 	<name>basePan</name>
-	<deviceName>dyio</deviceName>
+	<deviceName>cmod</deviceName>
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>0.33</scale>
@@ -692,7 +692,7 @@
 </link>
 <link>
 	<name>baseTilt</name>
-	<deviceName>dyio</deviceName>
+	<deviceName>cmod</deviceName>
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>0.33</scale>
@@ -748,7 +748,7 @@
 </link>
 <link>
 	<name>elbow</name>
-	<deviceName>dyio</deviceName>
+	<deviceName>cmod</deviceName>
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>0.33</scale>

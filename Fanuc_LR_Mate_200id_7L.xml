@@ -493,7 +493,7 @@
 	<name>baseTilt</name>
 	<deviceName>dyio</deviceName>
 	<type>servo-rotory</type>
-	<index>1</index>
+	<index>0</index>
 	<scale>0.33</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
@@ -549,7 +549,7 @@
 	<name>elbow</name>
 	<deviceName>dyio</deviceName>
 	<type>servo-rotory</type>
-	<index>2</index>
+	<index>0</index>
 	<scale>0.33</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
@@ -638,7 +638,7 @@
 	<name>basePan</name>
 	<deviceName>dyio</deviceName>
 	<type>servo-rotory</type>
-	<index>3</index>
+	<index>0</index>
 	<scale>0.33</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
@@ -694,7 +694,7 @@
 	<name>baseTilt</name>
 	<deviceName>dyio</deviceName>
 	<type>servo-rotory</type>
-	<index>4</index>
+	<index>0</index>
 	<scale>0.33</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
@@ -750,7 +750,7 @@
 	<name>elbow</name>
 	<deviceName>dyio</deviceName>
 	<type>servo-rotory</type>
-	<index>5</index>
+	<index>0</index>
 	<scale>0.33</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
@@ -911,7 +911,7 @@
 	<roty>-0.0</roty>
 	<rotz>-0.0</rotz>
 </baseToZframe>
-	<mass>0.16200000000000003</mass>
+	<mass>0.5</mass>
 	<centerOfMassFromCentroid>	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>

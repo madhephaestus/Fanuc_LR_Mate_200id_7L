@@ -57,6 +57,9 @@ return new ICadGenerator() {
 		finger.setColor(Color.BLUE)
 		finger.setManipulator(dh.getLinkObjectManipulator(linkIndex))
 		parts.add(finger)
+		for(int i=0;i<parts.size();i++) {
+			parts.get(i).setName(dh.getScriptingName()+" finger "+linkIndex+" part "+i)
+		}
 		return parts;
 	}
 

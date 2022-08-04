@@ -58,7 +58,7 @@ return new ICadGenerator() {
 		finger.setManipulator(dh.getLinkObjectManipulator(linkIndex))
 		parts.add(finger)
 		for(int i=0;i<parts.size();i++) {
-			parts.get(i).setName(dh.getScriptingName()+" finger "+linkIndex+" part "+i)
+			parts.get(i).setName(dh.getScriptingName()+" bellow "+linkIndex+" part "+i)
 		}
 		return parts;
 	}

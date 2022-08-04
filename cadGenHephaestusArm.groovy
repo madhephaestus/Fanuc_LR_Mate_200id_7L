@@ -118,7 +118,9 @@ return new ICadGenerator(){
 						c.setManipulator(manipulator)
 					}
 				}
-					
+				for(int i=0;i<parts.size();i++) {
+					parts.get(i).setName("Fanuc link "+arg1+" part "+i)
+				}	
 				return parts;
 			}
 
@@ -134,8 +136,12 @@ return new ICadGenerator(){
 				base.setManipulator(manipulator)
 
 				parts.add(base)
-				for(CSG part :parts)
+				for(CSG part :parts) {
 					part.setColor(Color.web("#f3da0b"))
+				}
+				for(int i=0;i<parts.size();i++) {
+					parts.get(i).setName("Fanuc link base part "+i)
+				}
 				return parts;
 			}
 		};

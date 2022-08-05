@@ -41,6 +41,7 @@ return new ICadGenerator() {
 			 finger=Vitamins.get(ScriptingEngine.fileFromGit(
 				"https://github.com/madhephaestus/Fanuc_LR_Mate_200id_7L.git",
 				"mesh/fingertip.stl"))
+			 
 
 		}else {
 			finger=Vitamins.get(ScriptingEngine.fileFromGit(
@@ -53,7 +54,9 @@ return new ICadGenerator() {
 				.toYMax()
 				.toXMax()
 				.movey(2)
-				
+		if(linkIndex!=0) {
+			finger.getStorage().set("no-collide", true);
+		}		
 		finger.setColor(Color.BLUE)
 		finger.setManipulator(dh.getLinkObjectManipulator(linkIndex))
 		parts.add(finger)

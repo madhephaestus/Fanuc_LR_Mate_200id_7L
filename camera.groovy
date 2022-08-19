@@ -8,7 +8,7 @@ import eu.mihosoft.vrl.v3d.Cylinder
 import eu.mihosoft.vrl.v3d.Vector3d
 
 if(args==null)
-	args=[1280,720.0,950]
+	args=[1280,720.0,934.47503662109375]
 double ratio = args[1]/args[0]
 println ratio
 double height = 10

@@ -1,5 +1,7 @@
 //Your code here
 import  eu.mihosoft.vrl.v3d.ext.quickhull3d.*
+import javafx.scene.paint.Color
+import javafx.scene.shape.DrawMode
 import eu.mihosoft.vrl.v3d.CSG
 import eu.mihosoft.vrl.v3d.Cube
 import eu.mihosoft.vrl.v3d.Cylinder
@@ -30,4 +32,6 @@ CSG simpleSyntax =new Cylinder(height/2,height/4).toCSG()
 					.movey(-height/8)
 
 viewbox=viewbox.union(box,simpleSyntax,simpleSyntax.movez(height))
+//viewbox.getMesh().setDrawMode(DrawMode.LINE)
+viewbox.setColor(Color.BLACK)
 return viewbox

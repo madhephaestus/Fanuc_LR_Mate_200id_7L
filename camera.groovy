@@ -33,6 +33,7 @@ CSG simpleSyntax =new Cylinder(height/2,height/4).toCSG()
 					.movey(-height/8)
 
 viewbox=viewbox.union(box,simpleSyntax,simpleSyntax.movez(height))
+		.rotz(-90)
 //viewbox.getMesh().setDrawMode(DrawMode.LINE)
 viewbox.setColor(Color.BLACK)
 return viewbox

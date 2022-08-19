@@ -13,11 +13,12 @@ double ratio = args[1]/args[0]
 println ratio
 double height = 10
 double percentHeight = height/args[1]
-
-def points = [	new Vector3d(args[1]*percentHeight/2, args[0]*percentHeight/2, 0),
-			new Vector3d(args[1]*percentHeight/2, -args[0]*percentHeight/2, 0),
-			new Vector3d(-args[1]*percentHeight/2, args[0]*percentHeight/2, 0),
-			new Vector3d(-args[1]*percentHeight/2, -args[0]*percentHeight/2, 0),
+def x=args[1]*percentHeight/2
+def y = args[0]*percentHeight/2
+def points = [	new Vector3d(x, y, 0),
+			new Vector3d(x, -y, 0),
+			new Vector3d(-x, y, 0),
+			new Vector3d(-x, -y, 0),
 			new Vector3d(0, 0, height)
 ]
 CSG viewbox = HullUtil.hull(points)

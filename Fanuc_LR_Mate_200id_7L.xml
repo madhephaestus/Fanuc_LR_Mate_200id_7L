@@ -417,8 +417,8 @@
 		<file>fingerCad.groovy</file>
 	</cadEngine>
 	<driveEngine>
-		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
-		<file>WalkingDriveEngine.groovy</file>
+		<git>https://github.com/madhephaestus/Fanuc_LR_Mate_200id_7L.git</git>
+		<file>walking.groovy</file>
 	</driveEngine>
 
 <name>hand</name>

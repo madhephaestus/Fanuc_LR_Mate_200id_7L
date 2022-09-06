@@ -1,9 +1,12 @@
 
 import com.neuronrobotics.bowlerstudio.physics.TransformFactory
+import com.neuronrobotics.sdk.addons.kinematics.AbstractKinematicsNR
 import com.neuronrobotics.sdk.addons.kinematics.DHChain;
 import com.neuronrobotics.sdk.addons.kinematics.DhInverseSolver;
 import com.neuronrobotics.sdk.addons.kinematics.math.RotationNR;
 import com.neuronrobotics.sdk.addons.kinematics.math.TransformNR;
+
+import java.text.DecimalFormat
 import java.util.ArrayList;
 
 import com.neuronrobotics.sdk.addons.kinematics.DHChain;
@@ -63,6 +66,10 @@ public class scriptJavaIKModel implements DhInverseSolver {
 //			if(debug)Platform.runLater({TransformFactory.nrToAffine(target,white.getManipulator())})
 //		}
 		//System.out.println("My 6dof IK "+target);
+		double[] current = new double[jointSpaceVector.length]
+		for(int i=0;i<current.length;i++) {
+			current[i]=jointSpaceVector[i];
+		}
 		ArrayList<DHLink> links = chain.getLinks();
 		int linkNum = jointSpaceVector.length;
 		TransformNR l0Offset = linkOffset(links.get(0))
@@ -264,22 +271,68 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		if(debug)Platform.runLater({TransformFactory.nrToAffine(wristMOvedToCenter1,green.getManipulator())})
 		if(debug)Platform.runLater({TransformFactory.nrToAffine(wristMOvedToCenter2,red.getManipulator())})
 
-		for(int i=3;i<jointSpaceVector.length;i++) {
-			if(jointSpaceVector[i]>180)
-				jointSpaceVector[i]-=360.0
-			if(jointSpaceVector[i]<-180)
-				jointSpaceVector[i]+=360.0
-		}
-//		for(int i=0;i<jointSpaceVector.length;i++) {
-//			if(Math.abs(jointSpaceVector[i])<0.001) {
-//				jointSpaceVector[i]=0;
-//			}
-//		}
+		//println"\n\n"	
+		double[] nrm = normalize([jointSpaceVector[3],jointSpaceVector[4],jointSpaceVector[5]]as double[],
+			[current[3],current[4],current[5]]as double[],
+			chain);
+		jointSpaceVector[3]=nrm[0]
+		jointSpaceVector[4]=nrm[1]
+		jointSpaceVector[5]=nrm[2]
 		if(debug)println "Euler Decomposition proccesed \n"+jointSpaceVector[3]+" \n"+jointSpaceVector[4]+" \n"+jointSpaceVector[5]
 		//println "Law of cosines results "+shoulderTiltAngle+" and "+elbowTiltAngle
 		return jointSpaceVector;
 	}
-
+	double[] normalize(double[] calculated,double[] current, DHChain chain) {
+		AbstractKinematicsNR kin = chain.kin;
+		DecimalFormat df = new DecimalFormat("000.00");
+		double[] alt1 = [calculated[0]-180,-calculated[1],calculated[2]-180]as double[]
+		HashMap<double[],Double> scores= new HashMap<>();
+		score(calculated,current,scores,kin)
+		score(alt1,current,scores,kin)
+		score(calculated.collect{it+360}as double[],current,scores,kin)
+		score(alt1.collect{it+360}as double[],current,scores,kin)
+		score(calculated.collect{it-360}as double[],current,scores,kin)
+		score(alt1.collect{it-360}as double[],current,scores,kin)
+		score([calculated[0]-360,calculated[1],calculated[2]]as double[],current,scores,kin)
+		score([calculated[0]+360,calculated[1],calculated[2]]as double[],current,scores,kin)
+		
+		score([alt1[0]-360,alt1[1],alt1[2]]as double[],current,scores,kin)
+		score([alt1[0]+360,alt1[1],alt1[2]]as double[],current,scores,kin)
+		
+		double score=scores.get(calculated);
+		double[] ret=calculated;
+		for(double[]  tmp:scores.keySet()) {
+			double delt =scores.get(tmp)
+			//println ""+tmp.collect{df.format(it)}+" score "+delt+" cur "+current.collect{df.format(it)}
+			if(delt<score) {
+				score=delt
+				ret=tmp
+				//println "Best yet"
+			}
+		}
+//		if(ret!=calculated)
+//			println "Current "+current.collect{df.format(it)}+" Normalizing wrist from:\n"+calculated.collect{df.format(it)+"\t"}+"\nto:\n"+ret.collect{df.format(it)+"\t"}
+		return ret
+	}
+	
+	void score(double[] calculated,double[] current,HashMap<double[],Double> scores,AbstractKinematicsNR kin ) {
+		double delt=0;
+		for(int i=0;i<3;i++) {
+			def i3 = i+3
+			if(calculated[i] >kin.getMaxEngineeringUnits(i3)) {
+				calculated[i]-=360
+			}
+			if(calculated[i] <kin.getMinEngineeringUnits(i3)) {
+				calculated[i]+=360
+			}
+			double measure = current[i]-calculated[i]
+			if(Math.abs(measure)>Math.abs(delt)) {
+				delt=measure;
+			}
+		}
+		scores.put(calculated, Math.abs(delt))
+	}
+	
 	public double[] inverseKinematics34dof(TransformNR target, double[] jointSpaceVector, DHChain chain) {
 		//System.out.println("My IK");
 		//		try {

@@ -272,7 +272,7 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		if(debug)Platform.runLater({TransformFactory.nrToAffine(wristMOvedToCenter2,red.getManipulator())})
 
 		//println"\n\n"	
-		double[] nrm = normalize([jointSpaceVector[3],jointSpaceVector[4],jointSpaceVector[5]]as double[],
+		double[] nrm = WristNormalizer.normalize([jointSpaceVector[3],jointSpaceVector[4],jointSpaceVector[5]]as double[],
 			[current[3],current[4],current[5]]as double[],
 			chain);
 		jointSpaceVector[3]=nrm[0]

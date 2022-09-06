@@ -6,6 +6,7 @@ import com.neuronrobotics.sdk.addons.kinematics.DhInverseSolver;
 import com.neuronrobotics.sdk.addons.kinematics.math.RotationNR;
 import com.neuronrobotics.sdk.addons.kinematics.math.TransformNR;
 
+import java.lang.reflect.Method
 import java.text.DecimalFormat
 import java.util.ArrayList;
 
@@ -270,10 +271,13 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		if(debug)Platform.runLater({TransformFactory.nrToAffine(wristMOvedToCenter0,blue.getManipulator())})
 		if(debug)Platform.runLater({TransformFactory.nrToAffine(wristMOvedToCenter1,green.getManipulator())})
 		if(debug)Platform.runLater({TransformFactory.nrToAffine(wristMOvedToCenter2,red.getManipulator())})
-
+			
 		//println"\n\n"	
-		double[] nrm = WristNormalizer.normalize([jointSpaceVector[3],jointSpaceVector[4],jointSpaceVector[5]]as double[],
-			[current[3],current[4],current[5]]as double[],
+		double[] j =[jointSpaceVector[3],jointSpaceVector[4],jointSpaceVector[5]]as double[];
+		double[] c =	[current[3],current[4],current[5]]as double[]
+		double[] nrm = WristNormalizer.normalize(
+			j,
+			c,
 			chain);
 		jointSpaceVector[3]=nrm[0]
 		jointSpaceVector[4]=nrm[1]

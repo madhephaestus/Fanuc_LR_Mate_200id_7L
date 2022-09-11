@@ -3,6 +3,7 @@ import com.neuronrobotics.bowlerstudio.physics.TransformFactory
 import com.neuronrobotics.sdk.addons.kinematics.AbstractKinematicsNR
 import com.neuronrobotics.sdk.addons.kinematics.DHChain;
 import com.neuronrobotics.sdk.addons.kinematics.DhInverseSolver;
+import com.neuronrobotics.sdk.addons.kinematics.WristNormalizer
 import com.neuronrobotics.sdk.addons.kinematics.math.RotationNR;
 import com.neuronrobotics.sdk.addons.kinematics.math.TransformNR;
 
@@ -302,16 +303,17 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		
 		score([alt1[0]-360,alt1[1],alt1[2]]as double[],current,scores,kin)
 		score([alt1[0]+360,alt1[1],alt1[2]]as double[],current,scores,kin)
-		
+
 		double score=scores.get(calculated);
 		double[] ret=calculated;
+		println "\n\n"
 		for(double[]  tmp:scores.keySet()) {
 			double delt =scores.get(tmp)
-			//println ""+tmp.collect{df.format(it)}+" score "+delt+" cur "+current.collect{df.format(it)}
+			println ""+tmp.collect{df.format(it)}+" score "+delt+" cur "+current.collect{df.format(it)}
 			if(delt<score) {
 				score=delt
 				ret=tmp
-				//println "Best yet"
+				println "Best yet"
 			}
 		}
 //		if(ret!=calculated)

@@ -27,15 +27,15 @@
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>1.0</scale>
-	<upperLimit>20</upperLimit>
-	<lowerLimit>-20</lowerLimit>
+	<upperLimit>20.0</upperLimit>
+	<lowerLimit>-20.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>0</staticOffset>
+	<staticOffset>0.0</staticOffset>
 	<deviceTheoreticalMax>20.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-20</deviceTheoreticalMin>
+	<deviceTheoreticalMin>-20.0</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>0</indexLatch>
+	<indexLatch>0.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -83,15 +83,15 @@
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>1.0</scale>
-	<upperLimit>20</upperLimit>
-	<lowerLimit>-20</lowerLimit>
+	<upperLimit>20.0</upperLimit>
+	<lowerLimit>-20.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>0</staticOffset>
+	<staticOffset>0.0</staticOffset>
 	<deviceTheoreticalMax>20.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-20</deviceTheoreticalMin>
+	<deviceTheoreticalMin>-20.0</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>0</indexLatch>
+	<indexLatch>0.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -139,15 +139,15 @@
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>1.0</scale>
-	<upperLimit>20</upperLimit>
-	<lowerLimit>-20</lowerLimit>
+	<upperLimit>20.0</upperLimit>
+	<lowerLimit>-20.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>0</staticOffset>
+	<staticOffset>0.0</staticOffset>
 	<deviceTheoreticalMax>20.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-20</deviceTheoreticalMin>
+	<deviceTheoreticalMin>-20.0</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>0</indexLatch>
+	<indexLatch>0.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -195,15 +195,15 @@
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>1.0</scale>
-	<upperLimit>20</upperLimit>
-	<lowerLimit>-20</lowerLimit>
+	<upperLimit>20.0</upperLimit>
+	<lowerLimit>-20.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>0</staticOffset>
+	<staticOffset>0.0</staticOffset>
 	<deviceTheoreticalMax>20.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-20</deviceTheoreticalMin>
+	<deviceTheoreticalMin>-20.0</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>0</indexLatch>
+	<indexLatch>0.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -244,21 +244,22 @@
 		<Alpha>0.0</Alpha>
 	</DHParameters>
 
-</link><link>
+</link>
+<link>
 	<name>b4</name>
 	<deviceName>cmod</deviceName>
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>1.0</scale>
-	<upperLimit>20</upperLimit>
-	<lowerLimit>-20</lowerLimit>
+	<upperLimit>20.0</upperLimit>
+	<lowerLimit>-20.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>0</staticOffset>
+	<staticOffset>0.0</staticOffset>
 	<deviceTheoreticalMax>20.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-20</deviceTheoreticalMin>
+	<deviceTheoreticalMin>-20.0</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>0</indexLatch>
+	<indexLatch>0.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -306,15 +307,15 @@
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>1.0</scale>
-	<upperLimit>20</upperLimit>
-	<lowerLimit>-20</lowerLimit>
+	<upperLimit>20.0</upperLimit>
+	<lowerLimit>-20.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>0</staticOffset>
+	<staticOffset>0.0</staticOffset>
 	<deviceTheoreticalMax>20.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-20</deviceTheoreticalMin>
+	<deviceTheoreticalMin>-20.0</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>0</indexLatch>
+	<indexLatch>0.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -362,15 +363,15 @@
 	<type>CMOD</type>
 	<index>0</index>
 	<scale>1.0</scale>
-	<upperLimit>20</upperLimit>
-	<lowerLimit>-20</lowerLimit>
+	<upperLimit>20.0</upperLimit>
+	<lowerLimit>-20.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>0</staticOffset>
+	<staticOffset>0.0</staticOffset>
 	<deviceTheoreticalMax>20.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-20</deviceTheoreticalMin>
+	<deviceTheoreticalMin>-20.0</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>0</indexLatch>
+	<indexLatch>0.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -424,13 +425,13 @@
 </ZframeToRAS>
 
 <baseToZframe>
-	<x>25.0</x>
+	<x>0.0</x>
 	<y>0.0</y>
-	<z>68.5</z>
-	<rotw>0.5000654493708816</rotw>
-	<rotx>-0.500021812332044</rotx>
-	<roty>0.4999781791005912</roty>
-	<rotz>0.49993454967718914</rotz>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>1.5902773457655432E-13</rotz>
 </baseToZframe>
 
 </appendage>
@@ -454,7 +455,6 @@
 	<roty>-0.0</roty>
 	<rotz>-0.0</rotz>
 </baseToZframe>
-
 	<mass>0.5</mass>
 	<centerOfMassFromCentroid>	<x>0.0</x>
 	<y>0.0</y>

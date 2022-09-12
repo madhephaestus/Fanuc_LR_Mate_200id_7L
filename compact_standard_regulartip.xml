@@ -22,7 +22,7 @@
 		<file>DefaultDhSolver.groovy</file>
 	</kinematics>
 <link>
-	<name>base</name>
+	<name>b1</name>
 	<deviceName>cmod</deviceName>
 	<type>CMOD</type>
 	<index>0</index>

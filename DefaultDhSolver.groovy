@@ -329,12 +329,14 @@ public class scriptJavaIKModel implements DhInverseSolver {
 			println "\n\n"
 			for (double[] tmp : scores.keySet()) {
 				double delt = scores.get(tmp);
-				println tmp+" score "+delt
+				print tmp
+				print " score "+delt
 				if (delt < score) {
 					score = delt;
 					ret = tmp;
 					println "Best Yet"
 				}
+				println""
 			}
 			scores.clear();
 

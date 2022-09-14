@@ -334,12 +334,14 @@ public class scriptJavaIKModel implements DhInverseSolver {
 				if (delt < score) {
 					score = delt;
 					ret = tmp;
-					println "Best Yet"
+					print "\nBest Yet"
 				}
 				println""
 			}
 			scores.clear();
-
+			print "\n Choosing "
+			print ret
+			print "\n"
 			return ret;
 		}
 		throw new RuntimeException("No Wrist Solution! ");

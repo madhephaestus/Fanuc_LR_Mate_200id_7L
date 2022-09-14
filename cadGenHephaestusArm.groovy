@@ -97,23 +97,37 @@ return new ICadGenerator(){
 					def link = tip.union(calShaft)	
 					link.setColor(Color.web("#C0C0C0"))
 					double fingerTop = 160-68.5
-					CSG finger=Vitamins.get(ScriptingEngine.fileFromGit(
-						"https://github.com/madhephaestus/Fanuc_LR_Mate_200id_7L.git",
-						"mesh/4acc-5k-kin-centered.stl")).rotz(-90).movez(fingerTop)
-						.setColor(Color.BLUE)
-					double seperation = 70
-					
-					CSG left= finger.movex(seperation/2)
-					CSG right= finger.rotz(180).movex(-seperation/2)
-					CSG hand = new Cube(finger.getTotalX()+seperation,finger.getTotalY(),25 ).toCSG()
+					boolean circle=false;
+					MobileBase handMB = arg0.getSlaveMobileBase(arg1)
+					double handThickness=25
+					CSG lug = new Cube(handThickness,30,40 ).toCSG()
+								.toYMax()
+					def fingerLugs = []
+					for(DHParameterKinematics k:handMB.getAppendages()) {
+						def mod = k.getRobotToFiducialTransform()
+						def csgtf = TransformFactory.nrToCSG(mod);
+						CSG lugTransformed = lug.transformed(csgtf)
 								.toZMin()
 								.movez(fingerTop)
 								.setColor(Color.WHITE)
+						fingerLugs.add(lugTransformed)
+						
+					}
+					
+					double seperation = 60
+					CSG hand = new Cube(handThickness ).toCSG()
+								.toZMin()
+								.movez(fingerTop)
+								.union(fingerLugs)
+								.hull()
+								.setColor(Color.WHITE)
+								
 					CSG hose =new Cylinder(4, 60).toCSG()
 								.rotx(-70)
 								.movez(fingerTop+25)
 								.setColor(Color.LIGHTBLUE)
 					parts.addAll([hand,hose])
+					parts.addAll(fingerLugs)
 					for(CSG c:parts) {
 						c.setManipulator(manipulator)
 					}

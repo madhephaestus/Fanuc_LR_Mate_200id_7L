@@ -129,7 +129,7 @@ return new ICadGenerator(){
 					parts.addAll([hand,hose])
 					parts.addAll(fingerLugs)
 					for(CSG c:parts) {
-						c.setManipulator(manipulator)
+						c.setManipulator(handMB.getRootListener())
 					}
 				}
 				for(int i=0;i<parts.size();i++) {

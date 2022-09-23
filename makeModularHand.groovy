@@ -6,7 +6,7 @@ import eu.mihosoft.vrl.v3d.Cube
 import eu.mihosoft.vrl.v3d.Cylinder
 import javafx.scene.paint.Color
 
-MobileBase handMB =args
+MobileBase handMB =args[0]
 ArrayList<CSG> parts = []
 def calTipConeHeight = 22.5
 def calSpikeRad=15.8/2

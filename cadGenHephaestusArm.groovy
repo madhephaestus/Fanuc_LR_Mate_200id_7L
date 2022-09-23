@@ -98,7 +98,7 @@ return new ICadGenerator(){
 			private ArrayList<CSG> getHandParts(MobileBase handMB){
 				return ScriptingEngine.gitScriptRun(
 						"https://github.com/madhephaestus/Fanuc_LR_Mate_200id_7L.git",
-						"makeModularHand.groovy",handMB)
+						"makeModularHand.groovy",[handMB])
 			}
 
 			@Override

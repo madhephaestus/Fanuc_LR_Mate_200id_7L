@@ -51,4 +51,7 @@ CSG hose =new Cylinder(4, 60).toCSG()
 			.setColor(Color.LIGHTBLUE)
 parts.addAll([hand,hose])
 parts.addAll(fingerLugs)
+for(CSG c:parts) {
+	c.setManipulator(handMB.getRootListener())
+}
 return parts;

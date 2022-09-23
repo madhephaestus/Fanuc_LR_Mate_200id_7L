@@ -86,9 +86,6 @@ return new ICadGenerator(){
 				}else if(arg1==6) {
 					MobileBase handMB = arg0.getSlaveMobileBase(arg1)
 					parts.addAll(getHandParts(handMB))
-					for(CSG c:parts) {
-						c.setManipulator(handMB.getRootListener())
-					}
 				}
 				for(int i=0;i<parts.size();i++) {
 					parts.get(i).setName("Fanuc link "+arg1+" part "+i)

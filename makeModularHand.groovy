@@ -32,7 +32,7 @@ for(DHParameterKinematics k:handMB.getAppendages()) {
 	CSG lugTransformed = lug.transformed(csgtf)
 			.toZMin()
 			.movez(fingerTop)
-			.setColor(Color.WHITE)
+			.setColor(Color.IVORY)
 	fingerLugs.add(lugTransformed)
 	
 }

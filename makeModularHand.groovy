@@ -43,7 +43,7 @@ CSG hand = new Cube(handThickness ).toCSG()
 			.movez(fingerTop)
 			.union(fingerLugs)
 			.hull()
-			.setColor(Color.WHITE)
+			.setColor(Color.IVORY)
 			
 CSG hose =new Cylinder(4, 60).toCSG()
 			.rotx(-70)

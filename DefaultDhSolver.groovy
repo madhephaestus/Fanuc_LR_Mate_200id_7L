@@ -276,7 +276,7 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		//println"\n\n"	
 		double[] j =[jointSpaceVector[3],jointSpaceVector[4],jointSpaceVector[5]]as double[];
 		double[] c =	[current[3],current[4],current[5]]as double[]
-		
+		println target
 		double[] nrm = normalize(
 			j,
 			c,

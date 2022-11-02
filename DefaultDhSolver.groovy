@@ -318,7 +318,7 @@ public class scriptJavaIKModel implements DhInverseSolver {
 				if (delt < score) {
 					score = delt;
 					ret = tmp;
-					print "\nBest Yet"
+					//print "\nBest Yet"
 				}
 //				println""
 			}

@@ -327,22 +327,22 @@ public class scriptJavaIKModel implements DhInverseSolver {
 			}
 			double score=scores.get(start);
 			double[] ret = start;
-			//println "\n\n"
+			println "\n\n"
 			for (double[] tmp : scores.keySet()) {
 				double delt = scores.get(tmp);
-//				print tmp
-//				print " score "+delt
+				print tmp
+				print " score "+delt
 				if (delt < score) {
 					score = delt;
 					ret = tmp;
-//					print "\nBest Yet"
+					print "\nBest Yet"
 				}
-//				println""
+				println""
 			}
 			scores.clear();
-//			print "\n Choosing "
-//			print ret
-//			print "\n"
+			print "\n Choosing "
+			print ret
+			print "\n"
 			return ret;
 		}
 		throw new RuntimeException("No Wrist Solution! ");

@@ -328,6 +328,7 @@ public class scriptJavaIKModel implements DhInverseSolver {
 			double score=scores.get(start);
 			double[] ret = start;
 			println "\n\n"
+			print "Start: \n"+calculated;
 			for (double[] tmp : scores.keySet()) {
 				double delt = scores.get(tmp);
 				print tmp

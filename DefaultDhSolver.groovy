@@ -276,6 +276,7 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		//println"\n\n"	
 		double[] j =[jointSpaceVector[3],jointSpaceVector[4],jointSpaceVector[5]]as double[];
 		double[] c =	[current[3],current[4],current[5]]as double[]
+		
 		double[] nrm = normalize(
 			j,
 			c,
@@ -357,12 +358,12 @@ public class scriptJavaIKModel implements DhInverseSolver {
 			int i3 = i + 3;
 			calculated[i] = calculated[i] % 360;
 			
-			if (calculated[i] > kin.getMaxEngineeringUnits(i3)) {
-				return;
-			}
-			if (calculated[i] < kin.getMinEngineeringUnits(i3)) {
-				return;
-			}
+//			if (calculated[i] > kin.getMaxEngineeringUnits(i3)) {
+//				return;
+//			}
+//			if (calculated[i] < kin.getMinEngineeringUnits(i3)) {
+//				return;
+//			}
 			double measure = current[i] - calculated[i];
 			if (Math.abs(measure) > Math.abs(delt)) {
 				delt = measure;

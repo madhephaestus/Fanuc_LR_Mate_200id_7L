@@ -308,7 +308,7 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		score(option( alt1[0] -180, alt1[1], -alt1[2]+180 ), current, scores, kin);
 		score(option( calculated[0] +180, -calculated[1], calculated[2]-180 ), current, scores, kin);
 		score(option( alt1[0] +180, -alt1[1], alt1[2]-180 ), current, scores, kin);
-
+		boolean print = false
 		if (scores.size() > 0) {
 			double[] start =calculated ;
 			if(scores.get(start)==null) {
@@ -316,24 +316,24 @@ public class scriptJavaIKModel implements DhInverseSolver {
 			}
 			double score=scores.get(start);
 			double[] ret = start;
-			println "\n\n"
-			print "Start: "+calculated+"\n";
-			print "Cur  : "+current+"\n";
+			if(print)println "\n\n"
+			if(print)print "Start: "+calculated+"\n";
+			if(print)print "Cur  : "+current+"\n";
 			for (double[] tmp : scores.keySet()) {
 				double delt = scores.get(tmp);
-				print tmp
-				print " score "+delt
+				if(print)print tmp
+				if(print)print " score "+delt
 				if (delt < score) {
 					score = delt;
 					ret = tmp;
-					print "\nBest Yet"
+					if(print)print "\nBest Yet"
 				}
-				println""
+				if(print)println""
 			}
 			scores.clear();
-			print "\n Choosing "
-			print ret
-			print "\n"
+			if(print)print "\n Choosing "
+			if(print)print ret
+			if(print)print "\n"
 			return ret;
 		}
 		throw new RuntimeException("No Wrist Solution! ");

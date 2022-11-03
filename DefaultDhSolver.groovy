@@ -346,13 +346,17 @@ public class scriptJavaIKModel implements DhInverseSolver {
 			AbstractKinematicsNR kin) {
 		score(calculated,current,scores,option(360,360,360))
 		score(calculated,current,scores,option(360,0,360))
+		score(calculated,current,scores,option(360,-360,-360))
+		score(calculated,current,scores,option(360,360,-360))
+		score(calculated,current,scores,option(360,0,-360))
 		score(calculated,current,scores,option(360,0,0))
 		score(calculated,current,scores,option(0,0,360))
 	}
 	private static void score(double[] calculated, double[] current, HashMap<double[], Double> scores,
 		double[] map) {
-		double delt = 0;
+		
 		for (int j = -1; j < 2; j++) {
+			double delt = 0;
 			double[] tmp = option(calculated[0]+(j*map[0]),calculated[1]+(j*map[1]),calculated[2]+(j*map[2]));
 			for (int i = 0; i < 3; i++) {
 				int i3 = i + 3;

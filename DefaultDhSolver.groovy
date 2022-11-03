@@ -342,9 +342,7 @@ public class scriptJavaIKModel implements DhInverseSolver {
 			calculated[i] = calculated[i] % 360;
 			
 			double measure = current[i] - calculated[i];
-			if (Math.abs(measure) > Math.abs(delt)) {
-				delt = measure;
-			}
+			delt += Math.abs(measure);
 		}
 		scores.put(calculated, Math.abs(delt));
 	}

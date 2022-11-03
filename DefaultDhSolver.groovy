@@ -300,14 +300,13 @@ public class scriptJavaIKModel implements DhInverseSolver {
 	public static double[] normalize(double[] calculated, double[] current, DHChain chain) {
 		AbstractKinematicsNR kin = chain.kin;
 		// DecimalFormat df = new DecimalFormat("000.00");
-		double[] alt1 =option( calculated[0] - 180, -calculated[1], calculated[2] - 180 );
 		HashMap<double[], Double> scores = new HashMap<>();
 		score(calculated, current, scores, kin);
-		score(alt1, current, scores, kin);
+		score(option( calculated[0] - 180, -calculated[1], calculated[2] - 180 ), current, scores, kin);
 		score(option( calculated[0] -180, -calculated[1], calculated[2]+180 ), current, scores, kin);
-		score(option( alt1[0] -180, alt1[1], -alt1[2]+180 ), current, scores, kin);
 		score(option( calculated[0] +180, -calculated[1], calculated[2]-180 ), current, scores, kin);
-		score(option( alt1[0] +180, -alt1[1], alt1[2]-180 ), current, scores, kin);
+		score(option( calculated[0] +180, -calculated[1], calculated[2]+180 ), current, scores, kin);
+		
 		boolean print = false
 		if (scores.size() > 0) {
 			double[] start =calculated ;

@@ -48,25 +48,25 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		return new TransformNR(link.DhStep(0))
 	}
 	public double[] inverseKinematics6dof(TransformNR target, double[] jointSpaceVector, DHChain chain) {
-//		if(debug) {
-//			if(blue==null) {
-//				blue=new Cylinder(0, 5, 30,9).toCSG()
-//						//.roty(-90)
-//						.setColor(javafx.scene.paint.Color.BLUE)
-//				green=new Cylinder(0, 5, 30,9).toCSG()//.roty(-90)
-//						.setColor(javafx.scene.paint.Color.GREEN)
-//				red=new Cylinder(0, 5, 30,9).toCSG()//.roty(-90)
-//				.setColor(javafx.scene.paint.Color.RED)
-//				white=new Cylinder(0, 5, 30,9).toCSG()//.roty(-90)
-//				
-//						.setColor(javafx.scene.paint.Color.WHITE)
-//			}
-//			BowlerStudioController.addCsg(blue)
-//			BowlerStudioController.addCsg(green)
-//			BowlerStudioController.addCsg(red)
-//			BowlerStudioController.addCsg(white)
-//			if(debug)Platform.runLater({TransformFactory.nrToAffine(target,white.getManipulator())})
-//		}
+		//		if(debug) {
+		//			if(blue==null) {
+		//				blue=new Cylinder(0, 5, 30,9).toCSG()
+		//						//.roty(-90)
+		//						.setColor(javafx.scene.paint.Color.BLUE)
+		//				green=new Cylinder(0, 5, 30,9).toCSG()//.roty(-90)
+		//						.setColor(javafx.scene.paint.Color.GREEN)
+		//				red=new Cylinder(0, 5, 30,9).toCSG()//.roty(-90)
+		//				.setColor(javafx.scene.paint.Color.RED)
+		//				white=new Cylinder(0, 5, 30,9).toCSG()//.roty(-90)
+		//
+		//						.setColor(javafx.scene.paint.Color.WHITE)
+		//			}
+		//			BowlerStudioController.addCsg(blue)
+		//			BowlerStudioController.addCsg(green)
+		//			BowlerStudioController.addCsg(red)
+		//			BowlerStudioController.addCsg(white)
+		//			if(debug)Platform.runLater({TransformFactory.nrToAffine(target,white.getManipulator())})
+		//		}
 		//System.out.println("My 6dof IK "+target);
 		double[] current = new double[jointSpaceVector.length]
 		for(int i=0;i<current.length;i++) {
@@ -83,7 +83,7 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		double y = target.getY();
 		double x = target.getX();
 		def targetNoRot =new TransformNR(x,y,z,new RotationNR())
-		
+
 		RotationNR q = target.getRotation();
 		def newCenter =target.copy()
 		// Start by finding the IK to the wrist center
@@ -102,7 +102,7 @@ public class scriptJavaIKModel implements DhInverseSolver {
 			//if(debug)Platform.runLater({TransformFactory.nrToAffine(newCenter,tipPointer2.getManipulator())})
 		}
 		def virtualcenter = newCenter.times(new TransformNR(0,0,10,
-			 new RotationNR(Math.toDegrees(links.get(5).getAlpha()),0,0)))
+				new RotationNR(Math.toDegrees(links.get(5).getAlpha()),0,0)))
 		// recompute the X,y,z with the new center
 		z = newCenter.getZ();
 		y = newCenter.getY();
@@ -150,7 +150,7 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		// Tip y should be 0
 		// this is the angle of the vector from base to tip
 		double tipToBaseAngle = Math.atan2(y,x); // we now have the rest of the links in the XY plane
-		
+
 		double tipToBaseAngleDegrees = Math.toDegrees(tipToBaseAngle);
 		if(debug)println "Base link to tip angle elevation "+tipToBaseAngleDegrees
 		def transformAngleOfTipToTriangle = new TransformNR(0,0,0,new RotationNR(0,-tipToBaseAngleDegrees,0))
@@ -190,10 +190,10 @@ public class scriptJavaIKModel implements DhInverseSolver {
 				))+elbowLink2CompositeAngleDegrees-180)
 		jointSpaceVector[2]=elbowTiltAngle
 		jointSpaceVector[1]=shoulderTiltAngle
-		
-		
+
+
 		/**
-		// compute the top of the wrist now that the first 3 links are calculated
+		 // compute the top of the wrist now that the first 3 links are calculated
 		 * 
 		 */
 		double[] wristLinks=new double[jointSpaceVector.length]
@@ -207,39 +207,39 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		chain.forwardKinematicsMatrix(wristLinks,chainToLoad)
 		def	startOfWristSet=chain.kin.inverseOffset(chainToLoad.get(2));
 		TransformNR wristMOvedToCenter0 =startOfWristSet
-											.inverse()// move back from base ot wrist to world home
-											.times(virtualcenter)// move forward to target, leaving the angle between the tip and the start of the rotation 
-		if(debug)println 	wristMOvedToCenter0								
+				.inverse()// move back from base ot wrist to world home
+				.times(virtualcenter)// move forward to target, leaving the angle between the tip and the start of the rotation
+		if(debug)println 	wristMOvedToCenter0
 		RotationNR qWrist=wristMOvedToCenter0.getRotation()
 		if(wristMOvedToCenter0.getX()==0&&wristMOvedToCenter0.getY()==0) {
 			println "Singularity! try something else"
 			return inverseKinematics6dof(target.copy().translateX(0.01));
 		}
 		def closest= (Math.toDegrees(Math.atan2(wristMOvedToCenter0.getY(), wristMOvedToCenter0.getX()))-Math.toDegrees(links.get(3).getTheta()))
-//		def options = [ closest,closest+180,closest-180]
-//		def currentWristStart=jointSpaceVector[3]
-//		for(def val:options) {
-//			def delt =  Math.abs(currentWristStart-val)
-//			if(delt<Math.abs(currentWristStart-closest)) {
-//				closest=val
-//			}
-//		}
+		//		def options = [ closest,closest+180,closest-180]
+		//		def currentWristStart=jointSpaceVector[3]
+		//		for(def val:options) {
+		//			def delt =  Math.abs(currentWristStart-val)
+		//			if(delt<Math.abs(currentWristStart-closest)) {
+		//				closest=val
+		//			}
+		//		}
 		jointSpaceVector[3]=closest
 		wristLinks[3]=jointSpaceVector[3]
 		if(jointSpaceVector.length==4)
 			return jointSpaceVector
-		
+
 		chainToLoad =[]
 		/**
-		// Calculte the second angle
+		 // Calculte the second angle
 		 * 
 		 */
 		chainToLoad.clear()
 		chain.forwardKinematicsMatrix(wristLinks,chainToLoad)
 		def	startOfWristSet2=chain.kin.inverseOffset(chainToLoad.get(3));
 		TransformNR wristMOvedToCenter1 =startOfWristSet2
-											.inverse()// move back from base ot wrist to world home
-											.times(virtualcenter)// move forward to target, leaving the angle between the tip and the start of the rotation
+				.inverse()// move back from base ot wrist to world home
+				.times(virtualcenter)// move forward to target, leaving the angle between the tip and the start of the rotation
 		if(debug)println " Middle link ="	+wristMOvedToCenter1
 		RotationNR qWrist2=wristMOvedToCenter1.getRotation()
 		if(wristMOvedToCenter1.getX()==0&&wristMOvedToCenter1.getY()==0) {
@@ -247,14 +247,14 @@ public class scriptJavaIKModel implements DhInverseSolver {
 			return inverseKinematics6dof(target.copy().translateX(0.01));
 		}
 		jointSpaceVector[4]=(Math.toDegrees(Math.atan2(wristMOvedToCenter1.getY(), wristMOvedToCenter1.getX()))-
-			Math.toDegrees(links.get(4).getTheta())-
-			90)
+				Math.toDegrees(links.get(4).getTheta())-
+				90)
 		wristLinks[4]=jointSpaceVector[4]
 		if(jointSpaceVector.length==5)
 			return jointSpaceVector
 		chainToLoad =[]
 		/**
-		// Calculte the last angle
+		 // Calculte the last angle
 		 * 
 		 */
 		chain.forwardKinematicsMatrix(wristLinks,chainToLoad)
@@ -263,24 +263,32 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		if(linkNum==7)
 			tool=linkOffset(links.get(6))
 		TransformNR wristMOvedToCenter2 =startOfWristSet3
-											.inverse()// move back from base ot wrist to world home
-											.times(target.times(tool.inverse()))// move forward to target, leaving the angle between the tip and the start of the rotation
+				.inverse()// move back from base ot wrist to world home
+				.times(target.times(tool.inverse()))// move forward to target, leaving the angle between the tip and the start of the rotation
 		if(debug)println "\n\nLastLink "	+wristMOvedToCenter2
 		RotationNR qWrist3=wristMOvedToCenter2.getRotation()
 		jointSpaceVector[5]=(Math.toDegrees(qWrist3.getRotationAzimuth())-Math.toDegrees(links.get(5).getTheta()))
-		
+
 		if(debug)Platform.runLater({TransformFactory.nrToAffine(wristMOvedToCenter0,blue.getManipulator())})
 		if(debug)Platform.runLater({TransformFactory.nrToAffine(wristMOvedToCenter1,green.getManipulator())})
 		if(debug)Platform.runLater({TransformFactory.nrToAffine(wristMOvedToCenter2,red.getManipulator())})
-			
-		//println"\n\n"	
-		double[] j =[jointSpaceVector[3],jointSpaceVector[4],jointSpaceVector[5]]as double[];
-		double[] c =	[current[3],current[4],current[5]]as double[]
-//		println target
+
+		//println"\n\n"
+		double[] j =[
+			jointSpaceVector[3],
+			jointSpaceVector[4],
+			jointSpaceVector[5]
+		]as double[];
+		double[] c =	[
+			current[3],
+			current[4],
+			current[5]
+		]as double[]
+		//		println target
 		double[] nrm = normalize(
-			j,
-			c,
-			chain);
+				j,
+				c,
+				chain);
 		jointSpaceVector[3]=nrm[0]
 		jointSpaceVector[4]=nrm[1]
 		jointSpaceVector[5]=nrm[2]
@@ -300,7 +308,7 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		score(option( alt1[0] -180, alt1[1], -alt1[2]+180 ), current, scores, kin);
 		score(option( calculated[0] +180, -calculated[1], calculated[2]-180 ), current, scores, kin);
 		score(option( alt1[0] +180, -alt1[1], alt1[2]-180 ), current, scores, kin);
-		
+
 		if (scores.size() > 0) {
 			double[] start =calculated ;
 			if(scores.get(start)==null) {
@@ -331,21 +339,34 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		throw new RuntimeException("No Wrist Solution! ");
 	}
 	private static double[] option(double w1,double w2,double w3) {
-		return [w1,w2,w3] as double[];
+		return [w1, w2, w3] as double[];
 	}
-	
+
 	private static void score(double[] calculated, double[] current, HashMap<double[], Double> scores,
 			AbstractKinematicsNR kin) {
-		double delt = 0;
-		for (int i = 0; i < 3; i++) {
-			int i3 = i + 3;
-			calculated[i] = calculated[i] % 360;
-			
-			double measure = current[i] - calculated[i];
-			delt += Math.abs(measure);
-		}
-		scores.put(calculated, Math.abs(delt));
+		score(calculated,current,scores,option(360,360,360))
+		score(calculated,current,scores,option(360,0,360))
+		score(calculated,current,scores,option(360,0,0))
+		score(calculated,current,scores,option(0,0,360))
 	}
+	private static void score(double[] calculated, double[] current, HashMap<double[], Double> scores,
+		double[] map) {
+		double delt = 0;
+		for (int j = -1; j < 2; j++) {
+			double[] tmp = option(calculated[0]+(j*map[0]),calculated[1]+(j*map[1]),calculated[2]+(j*map[2]));
+			for (int i = 0; i < 3; i++) {
+				int i3 = i + 3;
+
+				tmp[i] = tmp[i] % 360;
+
+				double measure = current[i] - tmp[i];
+				delt += Math.abs(measure);
+			}
+			scores.put(tmp, Math.abs(delt));
+		}
+		
+	}
+	
 	public double[] inverseKinematics34dof(TransformNR target, double[] jointSpaceVector, DHChain chain) {
 		//System.out.println("My IK");
 		//		try {

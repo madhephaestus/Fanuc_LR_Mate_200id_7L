@@ -304,8 +304,6 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		score(calculated, current, scores, kin);
 		score(option( calculated[0] - 180, -calculated[1], calculated[2] - 180 ), current, scores, kin);
 		score(option( calculated[0] -180, -calculated[1], calculated[2]+180 ), current, scores, kin);
-		score(option( calculated[0] +180, -calculated[1], calculated[2]-180 ), current, scores, kin);
-		score(option( calculated[0] +180, -calculated[1], calculated[2]+180 ), current, scores, kin);
 		
 		boolean print = false
 		if (scores.size() > 0) {
@@ -337,10 +335,6 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		}
 		throw new RuntimeException("No Wrist Solution! ");
 	}
-	private static double[] option(double w1,double w2,double w3) {
-		return [w1, w2, w3] as double[];
-	}
-
 	private static void score(double[] calculated, double[] current, HashMap<double[], Double> scores,
 			AbstractKinematicsNR kin) {
 		score(calculated,current,scores,option(360,360,360))
@@ -370,6 +364,9 @@ public class scriptJavaIKModel implements DhInverseSolver {
 		
 	}
 	
+	private static double[] option(double w1,double w2,double w3) {
+		return [w1, w2, w3] as double[];
+	}
 	public double[] inverseKinematics34dof(TransformNR target, double[] jointSpaceVector, DHChain chain) {
 		//System.out.println("My IK");
 		//		try {
